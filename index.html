@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy (Assignment-6)</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- nav section -->
+    <div class="lg:mx-10 lg:my-4 m-4 flex justify-between items-center">
+        <details class="dropdown lg:hidden md:hidden">
+            <summary class="btn m-1"><i class="fa-solid fa-bars"></i></summary>
+            <ul class="menu dropdown-content bg-gray-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Animals</a></li>
+                <li><a href="">Foundation</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </details>
+        <div class="flex gap-2">
+            <img class="object-fill" src="./images/logo.webp" alt="">
+            <h2 class="text-2xl font-bold">Peddy</h2>
+        </div>
+        <div class="hidden lg:block md:block">
+            <ul class="flex items-center gap-5">
+                <li><a href="">Home</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="border rounded-full py-2 px-3 bg-slate-300">
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </div>
+
+    <!-- banner section -->
+    <div class="flex justify-center">
+        <div class="text-center lg:mx-10 lg:my-10 m-4 max-w-lg">
+            <p class="font-bold">Bringing Families Together ❤️‍🔥</p>
+            <h1 class="lg:text-5xl text-2xl font-bold my-5">Your Path to Adoption Starts Here</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <button id="vewMoreBtn" class="btn bg-[#0E7A81] text-white mt-5">View More</button>
+            <div class="img flex justify-center">
+                <img src="./images/pet.webp" alt="">
+            </div>
+            <section id="adopt-best-frnd">
+                <h2 class="text-2xl font-bold my-5">Adopt Your Best Friend</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            </section>
+        </div>
+    </div>
+    <!-- categories button -->
+
+    <div id="categoriesBtnContainer"
+        class="space-y-5 lg:space-y-0 md:space-y-0 flex-wrap lg:flex   justify-between lg:mx-10 lg:my-10 m-4"></div>
+
+    <!-- main section -->
+    <main>
+        <div class="flex justify-between items-center lg:mx-10 m-4">
+            <div id="BestFriend" class="text-lg lg:text-2xl font-bold">Best Deal For you</div>
+            <div><button id="shortBtn" class="btn bg-[#0E7A81] text-white mt-5">Sort by price</button></div>
+        </div>
+
+        <div id="error"></div>
+
+        <div class="lg:flex justify-between ">
+            <!-- Show All Container -->
+            <div id="showAll-container"
+                class="lg:ml-10 lg:my-10 m-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5   space-y-4 lg:space-y-0">
+            </div>
+
+            <!-- Like Container -->
+            <div id="like-Container" class="mt-14 border rounded-lg lg:w-1/4  m-4 h-full p-6 grid grid-cols-2 gap-3">
+            </div>
+        </div>
+    </main>
+
+    <div id="spinner" class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-100 z-20">
+        <span class="loading loading-bars loading-lg"></span>
+    </div>
+
+
+    <!-- footer section -->
+
+    <footer class="bg-black p-4 w-full">
+        <div class="lg:mx-10 lg:my-4 m-4 lg:flex md:flex justify-between items-start space-y-4">
+            <div>
+                <div class="flex gap-2">
+                    <img class="object-fill" src="./images/logo.webp" alt="">
+                    <h2 class="text-2xl font-bold text-white">Peddy</h2>
+                </div>
+                <div class="mt-5">
+                    <p class="text-gray-300">Location: av. Washington 165, NY CA<br>54003<br>Phone: +31 85 964 47
+                        25<br>Email: info@yourdomain.com<br>Openings hours: 9.00 AM - 5.00 PM</p>
+                    <div class="flex gap-3 items-center mt-5 text-2xl">
+                        <i class="fa-brands fa-facebook text-blue-600"></i>
+                        <i class="fa-brands fa-x-twitter text-white"></i>
+                        <i class="fa-brands fa-youtube text-red-700"></i>
+                        <i class="fa-brands fa-instagram text-pink-600"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-white">Useful links</h2>
+                <ul class="text-gray-300 mt-5 space-y-1">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Animals</a></li>
+                    <li><a href="">Foundation</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-white">Drop a message</h2>
+                <input class="p-2 rounded-lg bg-slate-700 mt-5 w-full" type="email"
+                    placeholder="Enter your mail"><br><br>
+                <button class="btn bg-[#0E7A81] w-full text-white font-bold text-xl">Subscribe</button>
+            </div>
+        </div>
+        <p class="text-gray-500 text-center">&copy;2024 Peddy All right reserved!</p>
+    </footer>
+
+
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box" id="modal-content">
+
+        </div>
+    </dialog>
+
+
+    <!-- script -->
+    <script>
+        const viewMoreBtn = document.getElementById('vewMoreBtn');
+        viewMoreBtn.addEventListener('click', () => {
+            document.getElementById('BestFriend').scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            })
+        });
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
